@@ -1,8 +1,8 @@
-package me.nickrest.anticheat.event.listener;
+package com.sliceclient.anticheat.event.listener;
 
-import me.nickrest.anticheat.SliceAC;
-import me.nickrest.anticheat.manager.CheckManager;
-import me.nickrest.anticheat.user.User;
+import com.sliceclient.anticheat.SliceAC;
+import com.sliceclient.anticheat.user.User;
+import com.sliceclient.anticheat.manager.CheckManager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;

@@ -1,7 +1,7 @@
-package me.nickrest.anticheat.event;
+package com.sliceclient.anticheat.event;
 
+import com.sliceclient.anticheat.event.data.EventInfo;
 import lombok.Getter;
-import me.nickrest.anticheat.event.data.EventInfo;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

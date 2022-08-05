@@ -1,4 +1,4 @@
-package me.nickrest.anticheat.event.data;
+package com.sliceclient.anticheat.event.data;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

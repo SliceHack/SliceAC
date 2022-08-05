@@ -1,12 +1,9 @@
-package me.nickrest.anticheat;
+package com.sliceclient.anticheat;
 
+import com.sliceclient.anticheat.manager.EventManager;
 import lombok.Getter;
-import me.nickrest.anticheat.event.listener.Listener;
-import me.nickrest.anticheat.manager.CheckManager;
-import me.nickrest.anticheat.manager.EventManager;
-import me.nickrest.anticheat.manager.UserManager;
-import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
+import com.sliceclient.anticheat.event.listener.Listener;
+import com.sliceclient.anticheat.manager.UserManager;
 
 /**
  * The Slice AntiCheat plugin.

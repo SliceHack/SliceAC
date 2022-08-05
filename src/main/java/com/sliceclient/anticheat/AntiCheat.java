@@ -1,4 +1,4 @@
-package me.nickrest.anticheat;
+package com.sliceclient.anticheat;
 
 import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;

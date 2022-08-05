@@ -1,8 +1,8 @@
-package me.nickrest.anticheat.check.checks;
+package com.sliceclient.anticheat.check.checks;
 
-import me.nickrest.anticheat.check.Check;
-import me.nickrest.anticheat.check.data.CheckInfo;
-import me.nickrest.anticheat.event.data.EventInfo;
+import com.sliceclient.anticheat.check.Check;
+import com.sliceclient.anticheat.check.data.CheckInfo;
+import com.sliceclient.anticheat.event.data.EventInfo;
 import org.bukkit.Bukkit;
 import org.bukkit.event.player.PlayerMoveEvent;
 

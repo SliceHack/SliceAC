@@ -1,9 +1,9 @@
-package me.nickrest.anticheat.check;
+package com.sliceclient.anticheat.check;
 
 import lombok.Getter;
 import lombok.Setter;
-import me.nickrest.anticheat.check.data.CheckInfo;
-import me.nickrest.anticheat.user.User;
+import com.sliceclient.anticheat.check.data.CheckInfo;
+import com.sliceclient.anticheat.user.User;
 
 /***
  * The check class.

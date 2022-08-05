@@ -1,20 +1,14 @@
-package me.nickrest.anticheat.manager;
+package com.sliceclient.anticheat.manager;
 
 import lombok.Getter;
-import me.nickrest.anticheat.SliceAC;
-import me.nickrest.anticheat.check.Check;
-import me.nickrest.anticheat.event.EventSender;
-import me.nickrest.anticheat.event.data.EventInfo;
-import me.nickrest.anticheat.user.User;
-import org.bukkit.Bukkit;
+import com.sliceclient.anticheat.event.EventSender;
+import com.sliceclient.anticheat.event.data.EventInfo;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerEvent;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**

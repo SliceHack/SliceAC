@@ -1,4 +1,4 @@
-package me.nickrest.anticheat.check.data;
+package com.sliceclient.anticheat.check.data;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

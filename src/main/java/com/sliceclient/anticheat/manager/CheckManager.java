@@ -1,15 +1,13 @@
-package me.nickrest.anticheat.manager;
+package com.sliceclient.anticheat.manager;
 
+import com.sliceclient.anticheat.SliceAC;
+import com.sliceclient.anticheat.check.Check;
+import com.sliceclient.anticheat.user.User;
 import lombok.Getter;
-import me.nickrest.anticheat.SliceAC;
-import me.nickrest.anticheat.check.Check;
-import me.nickrest.anticheat.check.checks.TestCheck;
-import me.nickrest.anticheat.user.User;
-import org.bukkit.entity.Player;
+import com.sliceclient.anticheat.check.checks.TestCheck;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedMap;
 
 /***
  * CheckManager

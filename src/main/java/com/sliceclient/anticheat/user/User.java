@@ -1,8 +1,8 @@
-package me.nickrest.anticheat.user;
+package com.sliceclient.anticheat.user;
 
 import lombok.Getter;
 import lombok.Setter;
-import me.nickrest.anticheat.manager.CheckManager;
+import com.sliceclient.anticheat.manager.CheckManager;
 import org.bukkit.entity.Player;
 
 /**

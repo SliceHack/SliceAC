@@ -1,5 +1,6 @@
 package com.sliceclient.anticheat.utils;
 
+import lombok.experimental.UtilityClass;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
@@ -8,6 +9,7 @@ import org.bukkit.entity.Player;
  *
  * @author Nick
  * */
+@UtilityClass
 public class PlayerUtil {
 
     /**

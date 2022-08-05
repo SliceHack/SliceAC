@@ -1,6 +1,5 @@
 package me.nickrest.anticheat.user;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import me.nickrest.anticheat.manager.CheckManager;

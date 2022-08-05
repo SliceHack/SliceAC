@@ -2,7 +2,7 @@ package com.sliceclient.anticheat.manager;
 
 import com.sliceclient.anticheat.SliceAC;
 import com.sliceclient.anticheat.check.Check;
-import com.sliceclient.anticheat.check.checks.Movement.Fabricated;
+import com.sliceclient.anticheat.check.checks.movement.Fabricated;
 import com.sliceclient.anticheat.user.User;
 import lombok.Getter;
 import com.sliceclient.anticheat.check.checks.TestCheck;

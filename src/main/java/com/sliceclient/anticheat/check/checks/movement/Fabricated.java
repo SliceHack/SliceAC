@@ -1,7 +1,7 @@
-package com.sliceclient.anticheat.check.checks.Movement;
+package com.sliceclient.anticheat.check.checks.movement;
 
-import com.sliceclient.anticheat.Utils.MathUtil;
-import com.sliceclient.anticheat.Utils.MovementUtil;
+import com.sliceclient.anticheat.utils.MathUtil;
+import com.sliceclient.anticheat.utils.MovementUtil;
 import com.sliceclient.anticheat.check.Check;
 import com.sliceclient.anticheat.check.data.CheckInfo;
 import com.sliceclient.anticheat.event.data.EventInfo;

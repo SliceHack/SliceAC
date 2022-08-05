@@ -1,4 +1,4 @@
-package com.sliceclient.anticheat.Utils;
+package com.sliceclient.anticheat.utils;
 
 import org.bukkit.event.player.PlayerMoveEvent;
 

@@ -4,7 +4,7 @@ import lombok.Getter;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter
-public final class Anticheat extends JavaPlugin {
+public final class AntiCheat extends JavaPlugin {
 
     private SliceAC INSTANCE;
 

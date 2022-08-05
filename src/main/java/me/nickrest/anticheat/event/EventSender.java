@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 public class EventSender {
 
     /** The event to send */
-    private final Event event;
+    private final org.bukkit.event.Event event;
 
     /** The method to send */
     private final Method method;
@@ -30,7 +30,7 @@ public class EventSender {
      * @param method The method to run.
      * @param parent The object to run the method on.
      * */
-    public EventSender(Event event, Method method, Object parent) {
+    public EventSender(org.bukkit.event.Event event, Method method, Object parent) {
         this.event = event;
         this.method = method;
         this.object = parent;

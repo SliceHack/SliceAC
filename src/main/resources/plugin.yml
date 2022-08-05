@@ -1,4 +1,4 @@
 name: SliceAC
 version: '${project.version}'
-main: me.nickrest.anticheat.Anticheat
+main: me.nickrest.anticheat.AntiCheat
 api-version: 1.19

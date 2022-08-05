@@ -1,9 +1,12 @@
 package me.nickrest.anticheat.manager;
 
 import lombok.Getter;
-import me.nickrest.anticheat.event.Event;
 import me.nickrest.anticheat.event.EventSender;
 import me.nickrest.anticheat.event.data.EventInfo;
+import me.nickrest.anticheat.user.User;
+import org.bukkit.entity.Player;
+import org.bukkit.event.Event;
+import org.bukkit.event.player.PlayerEvent;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -25,7 +28,14 @@ public class EventManager {
      *
      * @param event The event to run.
      * */
-    public void runEvent(Event event) {
+    public void runEvent(Event event, User target) {
+        // check if the event is a player event
+        if(!(event instanceof PlayerEvent)) return;
+        PlayerEvent e = (PlayerEvent) event;
+        Player player = e.getPlayer();
+
+        if(!player.equals(target.getPlayer())) return;
+
         List<Object> registeredObjects = new ArrayList<>(this.registeredObjects);
 
         for (Object object : registeredObjects) {
@@ -34,7 +44,7 @@ public class EventManager {
                 if(method.getParameterTypes().length == 1
                         && method.isAnnotationPresent(EventInfo.class)
                         && method.getParameterTypes()[0].equals(event.getClass())) {
-                    new EventSender(event, method, object);
+                    new EventSender(e, method, object);
                 }
             }
         }

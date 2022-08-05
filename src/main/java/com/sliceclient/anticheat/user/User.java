@@ -13,6 +13,7 @@ import org.bukkit.entity.Player;
 @Getter @Setter
 public class User {
     private final Player player;
+    private String brand;
     private CheckManager checkManager;
 
     public User(Player player) {

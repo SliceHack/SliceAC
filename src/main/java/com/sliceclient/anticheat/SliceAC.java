@@ -35,7 +35,14 @@ public enum SliceAC {
         registerPluginChannel("MC|Brand", new BrandListener());
     }
 
+    /**
+     * Registers a plugin channel.
+     *
+     * @param channel The channel to register.
+     * @param listener The listener to register.
+     */
     private void registerPluginChannel(String channel, PluginMessageListener listener) {
         AntiCheat.instance().getServer().getMessenger().registerIncomingPluginChannel(AntiCheat.instance(), channel, listener);
     }
+
 }

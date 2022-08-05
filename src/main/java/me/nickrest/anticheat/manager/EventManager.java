@@ -1,16 +1,21 @@
 package me.nickrest.anticheat.manager;
 
 import lombok.Getter;
+import me.nickrest.anticheat.SliceAC;
+import me.nickrest.anticheat.check.Check;
 import me.nickrest.anticheat.event.EventSender;
 import me.nickrest.anticheat.event.data.EventInfo;
 import me.nickrest.anticheat.user.User;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.player.PlayerEvent;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * The EventManager
@@ -21,33 +26,27 @@ import java.util.List;
 public class EventManager {
 
     /** The registered objects */
-    private final List<Object> registeredObjects = new ArrayList<>();
+    private final Map<Object, Player> registeredObjects = new HashMap<>();
 
     /**
      * Runs all events.
      *
      * @param event The event to run.
      * */
-    public void runEvent(Event event, User target) {
-        // check if the event is a player event
+    public void runEvent(Event event) {
         if(!(event instanceof PlayerEvent)) return;
         PlayerEvent e = (PlayerEvent) event;
         Player player = e.getPlayer();
 
-        if(!player.equals(target.getPlayer())) return;
+        Map<Object, Player> registeredObjects = new HashMap<>(this.registeredObjects);
 
-        List<Object> registeredObjects = new ArrayList<>(this.registeredObjects);
-
-        for (Object object : registeredObjects) {
+        registeredObjects.forEach((object, player1) -> {
             for (Method method : getMethods(object.getClass())) {
-
-                if(method.getParameterTypes().length == 1
-                        && method.isAnnotationPresent(EventInfo.class)
-                        && method.getParameterTypes()[0].equals(event.getClass())) {
+                if(method.getParameterTypes().length == 1 && method.isAnnotationPresent(EventInfo.class) && method.getParameterTypes()[0].equals(event.getClass()) && player1.equals(player)) {
                     new EventSender(e, method, object);
                 }
             }
-        }
+        });
     }
 
     /**
@@ -56,7 +55,7 @@ public class EventManager {
      * @param object The object to check.
      * */
     public boolean isRegistered(Object object) {
-        return registeredObjects.contains(object);
+        return registeredObjects.get(object) != null;
     }
 
     /**
@@ -74,11 +73,11 @@ public class EventManager {
      *
      * @param object The object to register.
      * */
-    public void register(Object object) {
+    public void register(Object object, Player player) {
         if(isRegistered(object))
             return;
 
-        registeredObjects.add(object);
+        registeredObjects.put(object, player);
     }
 
     /**

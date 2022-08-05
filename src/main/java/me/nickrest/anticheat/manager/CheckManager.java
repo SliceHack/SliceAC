@@ -1,7 +1,11 @@
 package me.nickrest.anticheat.manager;
 
 import lombok.Getter;
+import me.nickrest.anticheat.SliceAC;
 import me.nickrest.anticheat.check.Check;
+import me.nickrest.anticheat.check.checks.TestCheck;
+import me.nickrest.anticheat.user.User;
+import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +23,10 @@ public class CheckManager {
     private final List<Check> checks = new ArrayList<>();
 
     /*** Constructor */
-    public CheckManager() {
+    public CheckManager(User user) {
+        register(new TestCheck());
+
+        checks.forEach((check -> { SliceAC.INSTANCE.getEventManager().register(check, user.getPlayer()); check.setUser(user); }));
 
     }
 

@@ -3,6 +3,9 @@ package me.nickrest.anticheat.manager;
 import lombok.Getter;
 import me.nickrest.anticheat.user.User;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +16,7 @@ import java.util.List;
  * @author Nick
  * **/
 @Getter
-public class UserManager {
+public class UserManager implements Listener {
 
     private final List<User> users = new ArrayList<>();
 

@@ -13,4 +13,8 @@ public final class AntiCheat extends JavaPlugin {
         INSTANCE = SliceAC.INSTANCE;
     }
 
+    public static AntiCheat instance() {
+        return getPlugin(AntiCheat.class);
+    }
+
 }

@@ -1,14 +1,16 @@
 package me.nickrest.anticheat.check;
 
 import lombok.Getter;
+import lombok.Setter;
 import me.nickrest.anticheat.check.data.CheckInfo;
+import me.nickrest.anticheat.user.User;
 
 /***
  * The check class.
  *
  * @author Nick
  * */
-@Getter
+@Getter @Setter
 public class Check {
 
     /** The check info */
@@ -16,6 +18,7 @@ public class Check {
 
     /** Info */
     private final String name, type, description;
+    public User user;
 
     /**
      * Constructor.

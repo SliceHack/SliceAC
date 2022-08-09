@@ -3,6 +3,7 @@ package com.sliceclient.anticheat.manager;
 import com.sliceclient.anticheat.SliceAC;
 import com.sliceclient.anticheat.check.Check;
 import com.sliceclient.anticheat.check.checks.movement.Fabricated;
+import com.sliceclient.anticheat.check.checks.movement.GroundSpoof;
 import com.sliceclient.anticheat.user.User;
 import lombok.Getter;
 import com.sliceclient.anticheat.check.checks.TestCheck;
@@ -23,8 +24,8 @@ public class CheckManager {
 
     /*** Constructor */
     public CheckManager(User user) {
-        register(new TestCheck());
-        register(new Fabricated());
+        register(new GroundSpoof());
+//        register(new Fabricated());
 
         checks.forEach((check -> { SliceAC.INSTANCE.getEventManager().register(check, user.getPlayer()); check.setUser(user); }));
 

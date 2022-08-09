@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import com.sliceclient.anticheat.check.data.CheckInfo;
 import com.sliceclient.anticheat.user.User;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 
 /***
  * The check class.
@@ -30,4 +32,13 @@ public class Check {
         type = info.type();
         description = info.description();
     }
+
+    /**
+     * Flags the check as failed.
+     * */
+    public void flag() {
+        String text = "&cSlice &7» &c" + user.getPlayer().getName() + " &7has been flagged for &c" + name + "  &7(&c" + type + "&7)";
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', text));
+    }
+
 }

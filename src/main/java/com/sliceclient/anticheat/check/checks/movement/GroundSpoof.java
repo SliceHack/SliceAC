@@ -25,8 +25,8 @@ public class GroundSpoof extends Check {
         this.lastLastOnGround = lastOnGround;
 
         // check's if player is spoofing on or off ground
-        if((!onGround && !lastOnGround && !lastLastOnGround) && user.getPlayer().isOnGround()) {
-            Bukkit.broadcastMessage("Ground SPOOFF!!!");
+        if(!onGround && !lastOnGround && !lastLastOnGround && user.getPlayer().isOnGround()) {
+            flag();
         }
     }
 }

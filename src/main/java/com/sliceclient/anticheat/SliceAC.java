@@ -32,7 +32,7 @@ public enum SliceAC {
          * minecraft:brand 1.9+
          */
         registerPluginChannel("minecraft:brand", new BrandListener());
-        registerPluginChannel("MC|Brand", new BrandListener());
+//        registerPluginChannel("MC|Brand", new BrandListener());
     }
 
     /**

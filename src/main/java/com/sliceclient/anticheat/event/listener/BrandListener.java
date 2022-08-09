@@ -3,10 +3,9 @@ package com.sliceclient.anticheat.event.listener;
 import com.google.common.io.ByteArrayDataInput;
 import com.google.common.io.ByteStreams;
 import com.sliceclient.anticheat.SliceAC;
-import com.sun.istack.internal.NotNull;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.messaging.PluginMessageListener;
+import org.jetbrains.annotations.NotNull;
 
 public class BrandListener implements PluginMessageListener {
 

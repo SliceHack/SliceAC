@@ -1,4 +1,4 @@
-package com.sliceclient.anticheat.check.checks.movement;
+package com.sliceclient.anticheat.check.checks.movement.ground;
 
 import com.sliceclient.anticheat.check.Check;
 import com.sliceclient.anticheat.check.data.CheckInfo;
